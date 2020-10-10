@@ -49,13 +49,43 @@
     </div>
 </body>
 <style>
-     @media only screen and (min-width: 1201px) {
     body {
         font-size: medium;
         margin: 0px;
         width: 100vw;
-        background: lightcoral;
         display: grid;
+        background: #26a69a;
+    }
+    div.head {
+        background: #26a69a;
+        grid-area: head;
+        color: white;
+        text-align: center;
+    }
+    div.left {
+        background: white;
+        grid-area: info;
+        text-align: justify;
+    }
+    div.center {
+        background: white;
+        grid-area: about_me;
+    }
+    div.right {
+        background: white;
+        grid-area: contact;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
+     @media only screen and (min-width: 1201px) {
+    body {
         column-gap: 20px;
         row-gap: 20px;
         grid-template-columns:  auto 50vw auto;
@@ -64,123 +94,72 @@
                              "info about_me contact"
                              "info none contact";
     }
-    div.head {
-        background: lightcyan;
-        grid-area: head;
-        text-align: center;
-    }
     div.left {
-        background: lightcyan;
-        grid-area: info;
-        text-align: justify;
-        box-shadow: 0px 15px 15px 10px #0288d1;
+        box-shadow: 0px 15px 15px 10px #b2dfdb;
         min-width: 300px;
     }
     div.center {
-        background: lightcyan;
-        grid-area: about_me;
-        box-shadow: 0px 15px 15px 0px #0288d1 ;
+        box-shadow: 0px 15px 15px 0px #b2dfdb ;
     }
     div.right {
-        background: lightcyan;
-        grid-area: contact;
         padding: 1em;
-        text-align: center;
-        box-shadow: 0px 15px 15px 10px #0288d1 ;
+        box-shadow: 0px 15px 15px 10px #b2dfdb ;
         min-width: 300px;
     }
 
 }
     @media only screen and (max-width: 1200px) {
 
-body {
-    font-size: medium;
-    margin: 0px;
-    width: 100vw;
-    background: lightcoral;
-    display: grid;
-    row-gap: 5px;
-    grid-template-columns:  50vw 50vw;
-    grid-template-rows: 75px auto auto auto;
-    grid-template-areas: "head head"
-                         "about_me about_me"
-                         "info contact";
-}
-div.head {
-    background: lightcyan;
-    grid-area: head;
-    text-align: center;
-    box-shadow: 0px 5px 5px 0px #0288d1;
-}
-div.left {
-    background: lightcyan;
-    grid-area: info;
-    text-align: justify;
-    min-width: 300px;
-    margin: 20px 0px 0px 50px;
-    box-shadow: -2px 5px 5px 0px  #0288d1;
-}
-div.center {
-    background: lightcyan;
-    grid-area: about_me;
-    box-shadow: 0px 5px 15px 0px #0288d1;
-    margin: 20px 50px;
-}
-div.right {
-    background: lightcyan;
-    grid-area: contact;
-    padding: 1em;
-    text-align: center;
-    min-width: 300px;
-    margin: 20px 50px 0px 0px;
-    box-shadow: 2px 10px 5px 0px  #0288d1;
-}
+    body {
+        row-gap: 5px;
+        grid-template-columns:  50vw 50vw;
+        grid-template-rows: 75px auto auto auto;
+        grid-template-areas: "head head"
+                             "about_me about_me"
+                             "info contact";
+    }
+    div.left {
+        min-width: 300px;
+        margin: 20px 0px 0px 50px;
+        box-shadow: -2px 5px 5px 0px  #b2dfdb;
+    }
+    div.center {
+        box-shadow: 0px 5px 15px 0px #b2dfdb;
+        margin: 20px 50px;
+    }
+    div.right {
+        padding: 1em;
+        min-width: 300px;
+        margin: 20px 50px 0px 0px;
+        box-shadow: 2px 10px 5px 0px  #b2dfdb;
+    }
 }
 @media only screen and (max-width: 600px) {
   
   body {
-  font-size: medium;
-  margin: 0px;
-  width: 100vw;
-  background: lightcoral;
-  display: grid;
-  row-gap: 5px;
-  grid-template-columns:  100vw;
-  grid-template-rows: 75px auto auto auto;
-  grid-template-areas: "head"
-                       "about_me"
-                       "info"
-                       "contact";
-}
-div.head {
-  background: lightcyan;
-  grid-area: head;
-  text-align: center;
-  box-shadow: 0px 5px 5px 0px #0288d1;
-}
+  
+    row-gap: 5px;
+    grid-template-columns:  100vw;
+    grid-template-rows: 75px auto auto auto;
+    grid-template-areas:   "head"
+                           "about_me"
+                           "info"
+                           "contact";
+    }
 
-div.center {
-  background: lightcyan;
-  grid-area: about_me;
-  box-shadow: 0px 5px 15px 0px #0288d1;
-  margin: 20px 10px;
-}
-div.left {
-  background: lightcyan;
-  grid-area: info;
-  text-align: justify;
-  margin: 20px 0px 0px 0px;
-  padding-bottom: 50px;
-}
-div.right {
-  background: lightcyan;
-  grid-area: contact;
-  padding: 1em;
-  text-align: center;
-  margin: 20px 0px 0px 0px;
-  box-shadow: 2px 5px 5px 0px  #0288d1;
-}
-
+    div.center {
+        box-shadow: 0px 5px 15px 0px #b2dfdb;
+        margin: 20px 10px;
+    }
+    div.left {
+        margin: 20px 0px 0px 0px;
+        padding-bottom: 50px;
+    }
+    div.right {
+        padding: 1em;
+        margin: 20px 0px 0px 0px;
+        box-shadow: 2px 5px 5px 0px  #0288d1;
+    }
 }
 
 
